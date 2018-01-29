@@ -1,0 +1,15 @@
+<p style="color: {{ .Get `color` }}">{{ .Get "color" }}</p>
+
+<p>{{ .Page.Params.title }}</p>
+
+<p>{{ .Get "data" }}</p>
+
+{{ $colors := .Get "colors" }}
+
+
+{{ range $key, $val := split $colors ","}}
+	<p style="color: {{ $val }}">{{ $key}} = {{ $val }}</p>
+{{end}}
+
+
+

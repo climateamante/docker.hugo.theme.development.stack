@@ -1,0 +1,11 @@
+# OSX | MAC
+.DS_Store
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+
+# NODE | NPM Modules
+app/node_modules
+/node_modules

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>//localhost:1313/contact/</loc>
+    <lastmod>2018-01-14T04:03:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/post/hello/</loc>
+    <lastmod>2018-01-13T22:52:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/post/pink/</loc>
+    <lastmod>2018-01-12T16:30:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/post/orange/</loc>
+    <lastmod>2018-01-12T16:12:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/about/</loc>
+    <lastmod>2018-01-12T04:00:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/post/blue/</loc>
+    <lastmod>2018-01-12T03:38:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/post/green/</loc>
+    <lastmod>2018-01-12T03:38:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/post/yellow/</loc>
+    <lastmod>2018-01-12T03:38:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/post/red/</loc>
+    <lastmod>2018-01-12T03:35:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/tags/one/</loc>
+    <lastmod>2018-01-14T04:03:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/post/</loc>
+    <lastmod>2018-01-13T22:52:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2018-01-14T04:03:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/tags/three/</loc>
+    <lastmod>2018-01-14T04:03:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/tags/two/</loc>
+    <lastmod>2018-01-14T04:03:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2018-01-14T04:03:06+00:00</lastmod>
+  </url>
+  
+</urlset>

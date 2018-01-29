@@ -1,0 +1,109 @@
+# docker-enginge: 17.06.0+
+# docker-compose.yml preferes spaces over tabs
+version: '3.3'
+services:
+   nginx:
+     depends_on:
+         - livereload
+     container_name: alpine.nginx
+     build:
+         labels:
+             alpine.nginx.description: "template for boilerplate"
+         context: ./
+         dockerfile: ./dockerfiles/alpine.nginx.dockerfile.sh
+     volumes:
+         - ./app/nginx/nginx.conf:/etc/nginx/nginx.conf
+         - ./app/nginx/conf.d/:/etc/nginx/conf.d/
+         - ./app/hugo/blog/public:/usr/share/nginx/html:rw
+     restart: always
+     command: ["nginx"]
+     image: researchranks/alpine.nginx:latest
+     expose:
+         - 35729
+         - 80
+         - 443
+     ports:
+         - 80:80
+         - 443:443
+   hugo:
+      container_name: alpine.hugo
+      build:
+         labels:
+            alpine.hugo.description: "template for boilerplate"
+         context: ./
+         dockerfile: ./dockerfiles/alpine.hugo.dockerfile.sh
+      volumes:
+         - ./dockerfiles/alpine.waitforit.sh:/waitforit.sh
+         - ./app/hugo/blog:/var/www/app/:rw
+      restart: always
+      expose:
+         - 35729 
+         - 1313
+      hostname: hugo
+      ports:
+          - 1313:1313
+         # - "0.0.0.0:1313:1313"
+         #- 1313:80
+      #entrypoint: ["hugo", "server", "--bind='0.0.0.0'", "--watch", "--cleanDestinationDir", "--renderToDisk", "--port=80", "--liveReloadPort=80", "--buildDrafts", "--ignoreCache", "--navigateToChanged", "--noHTTPCache", "--verbose"]
+      # extra_hosts:
+      #     - "0.0.0.0:127.0.0.1"
+      #   - "127.0.0.1:172.25.0.1"
+      entrypoint: "hugo server \
+       --baseURL='localhost' \
+       --bind='0.0.0.0' \
+       --watch \
+       --cleanDestinationDir \
+       --renderToDisk \
+       --buildDrafts \     
+       --disableFastRender \
+       --ignoreCache \
+       --appendPort=false \
+       --port=1313 \
+       --liveReloadPort=35729 \
+       --navigateToChanged \
+       --noHTTPCache \
+       --verbose"
+      #command: "/bin/sh -c \"while [ true ]; do nc -z -v 0.0.0.0 1313 && break; echo 'Not ready...'; sleep 1s; done; echo 'Ready!'\""
+      #command: "/bin/sh -c \"while [ true ]; do wget -q -O - 0.0.0.0:1313 && break; echo 'Not ready...'; sleep 1s; done; echo 'Ready!'\""
+      #command: "/waitforit.sh -c 'nc -z 0.0.0.0 1313' && echo 'up'"
+      #command: 'nc -vz waitfor 1313'
+      #command: "nc -l 1313"
+      #"--bind='127.0.0.1'"
+      #entrypoint: ["hugo", "server", "--watch", "--cleanDestinationDir", "--renderToDisk", "--port=1313", "--liveReloadPort=1313", "--buildDrafts", "--ignoreCache", "--navigateToChanged", "--noHTTPCache", "--verbose"]
+      #command: "nc -z -v -w5 0.0.0.0 1313"
+      #command: ["nc", "-w2", "-v" , "0.0.0.0", "1313"]
+      #command: ["./waitfor.sh", "http://localhost:1313", "--" , "echo", "Eficode site is up"]
+      #command: ["./dockerfiles/waitfor.sh", "http://localhost:1313", "--" , "echo", "Eficode site is up"]
+      #command: ["/docker.compose.wait.for.it.sh"]
+      image: researchranks/alpine.hugo:latest
+
+   livereload:
+      container_name: alpine.livereload
+      build:
+         labels:
+            alpine.livereload.description: "template for boilerplate"
+         context: ./
+         dockerfile: ./dockerfiles/alpine.livereload.dockerfile.sh
+      entrypoint: node bin/livereload.js /usr/src/livereload-watch -u true -d --exts 'html'
+      expose:
+         - 35729
+      ports:
+         - 35729:35729
+      volumes:
+         - ./app/hugo/blog/:/usr/src/livereload-watch
+      image: researchranks/alpine.livereload:latest
+
+networks:
+  local:
+    driver: bridge
+
+  # waitfor:
+  #   build:
+  #      labels:
+  #         alpine.waitfor.description: "template for boilerplate"
+  #      context: ./
+  #      dockerfile: ./dockerfiles/alpine.waitfor.dockerfile.sh
+  #   image: "researchranks/alpine.waitfor:latest"
+  #   hostname: waitfor
+  #   environment:
+  #      WAIT_HOSTS: alpine.hugo:1313

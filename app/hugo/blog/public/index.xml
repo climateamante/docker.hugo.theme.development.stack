@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>the new hugo site on hugo site</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in the new hugo site on hugo site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jan 2018 04:03:06 +0000</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contact</title>
+      <link>//localhost:1313/contact/</link>
+      <pubDate>Sun, 14 Jan 2018 04:03:06 +0000</pubDate>
+      
+      <guid>//localhost:1313/contact/</guid>
+      <description> Color yellow red blue
+ light blue  [ ] red
+ [ ] green
+ [x] blue
+ [ ] yellow
+  function say( word ) { return word; }  hugo markdown
+this is a footnote.1
+file.txt
+red
+Contact
+update | @ 01152018-041958PM
+0 = yellow
+1 = red
+2 = grey
+3 = orange
+2018    name age     mark 25   alice 28     the footnote [return]   </description>
+    </item>
+    
+    <item>
+      <title>Hello</title>
+      <link>//localhost:1313/post/hello/</link>
+      <pubDate>Sat, 13 Jan 2018 22:52:55 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/hello/</guid>
+      <description> some data goes here  </description>
+    </item>
+    
+    <item>
+      <title>Pink</title>
+      <link>//localhost:1313/post/pink/</link>
+      <pubDate>Fri, 12 Jan 2018 16:30:37 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/pink/</guid>
+      <description>  black
+  </description>
+    </item>
+    
+    <item>
+      <title>Orange</title>
+      <link>//localhost:1313/post/orange/</link>
+      <pubDate>Fri, 12 Jan 2018 16:12:46 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/orange/</guid>
+      <description> some data about orange  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Fri, 12 Jan 2018 04:00:37 +0000</pubDate>
+      
+      <guid>//localhost:1313/about/</guid>
+      <description> About Page | updated from hugo </description>
+    </item>
+    
+    <item>
+      <title>Blue</title>
+      <link>//localhost:1313/post/blue/</link>
+      <pubDate>Fri, 12 Jan 2018 03:38:09 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/blue/</guid>
+      <description> some data
+ </description>
+    </item>
+    
+    <item>
+      <title>Green</title>
+      <link>//localhost:1313/post/green/</link>
+      <pubDate>Fri, 12 Jan 2018 03:38:06 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/green/</guid>
+      <description> b  a  c    </description>
+    </item>
+    
+    <item>
+      <title>Yellow</title>
+      <link>//localhost:1313/post/yellow/</link>
+      <pubDate>Fri, 12 Jan 2018 03:38:02 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/yellow/</guid>
+      <description> black  </description>
+    </item>
+    
+    <item>
+      <title>Red</title>
+      <link>//localhost:1313/post/red/</link>
+      <pubDate>Fri, 12 Jan 2018 03:35:45 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/red/</guid>
+      <description>  red
+  </description>
+    </item>
+    
+  </channel>
+</rss>

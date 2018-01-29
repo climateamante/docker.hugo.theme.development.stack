@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>One on hugo site</title>
+    <link>//localhost:1313/tags/one/</link>
+    <description>Recent content in One on hugo site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jan 2018 04:03:06 +0000</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/tags/one/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contact</title>
+      <link>//localhost:1313/contact/</link>
+      <pubDate>Sun, 14 Jan 2018 04:03:06 +0000</pubDate>
+      
+      <guid>//localhost:1313/contact/</guid>
+      <description> Color yellow red blue
+ light blue  [ ] red
+ [ ] green
+ [x] blue
+ [ ] yellow
+  function say( word ) { return word; }  hugo markdown
+this is a footnote.1
+file.txt
+red
+Contact
+update | @ 01152018-041958PM
+0 = yellow
+1 = red
+2 = grey
+3 = orange
+2018    name age     mark 25   alice 28     the footnote [return]   </description>
+    </item>
+    
+  </channel>
+</rss>
