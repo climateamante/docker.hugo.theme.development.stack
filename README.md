@@ -35,23 +35,20 @@ docker run \
 	--noHTTPCache \
 	--port=80 \
 	--renderToDisk \
-	--source="hugo/ebook" \
+	--source="hugo/site" \
 	--verbose \
 	--watch=true
 	```
 
 
-## production ready ##
-
-
-
+## development ##
 
 ### setup: ###
  - folder structure for docker.alpine:
     - ``var/www/app/``
 
  - folder structure for hugo for nginx:
-    -  ``var/www/app/hugo/blog/public/index.html``
+    -  ``var/www/app/hugo/site/public/index.html``
 
 ## nginx ##
 
@@ -126,7 +123,7 @@ hugo server \
 --noHTTPCache \
 --port=80 \
 --renderToDisk \
---source="blog" \
+--source="hugo/site" \
 --verbose \
 --watch=true
 ```
