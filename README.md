@@ -15,12 +15,30 @@
 docker run \
 -v $PWD/app:/var/www/app:rw \
 -p 80:80 \
+-p 35729:35729 \
 --name alpine.hugo.dev \
 -it --rm researchranks/alpine.hugo /bin/ash
 ```
 
  1. ``hugo new site ebook``
- 1. 
+ 1. test the hugo livereload server
+	> note: docker needs the port to be bound to ``0.0.0.0``
+	1. ```
+	hugo server \
+	--bind="0.0.0.0" \
+	--buildDrafts \
+	--cleanDestinationDir \
+	--disableFastRender \
+	--ignoreCache \
+	--liveReloadPort=35729 \
+	--navigateToChanged \
+	--noHTTPCache \
+	--port=80 \
+	--renderToDisk \
+	--source="hugo/ebook" \
+	--verbose \
+	--watch=true
+	```
 
 
 ## production ready ##
