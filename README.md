@@ -10,6 +10,23 @@
 
  > LiveReload: 0.4.0 | build from node: 8.5.0 
 
+## fresh install | no previous content ##
+```
+docker run \
+-v $PWD/app:/var/www/app:rw \
+-p 80:80 \
+--name alpine.hugo.dev \
+-it --rm researchranks/alpine.hugo /bin/ash
+```
+
+ 1. ``hugo new site ebook``
+ 1. 
+
+
+## production ready ##
+
+
+
 
 ### setup: ###
  - folder structure for docker.alpine:
